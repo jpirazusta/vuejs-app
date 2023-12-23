@@ -1,21 +1,32 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
+  <header class="App-header">
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/">
+          <h2 class="App-header-title">My Spotify App</h2>
+        </RouterLink>
       </nav>
-    </div>
   </header>
 
   <RouterView />
 </template>
 
-<style scoped></style>
+<style scoped>
+.App-header {
+  background-color: white;
+  margin-bottom: 20px;
+  padding: 20px;
+  text-align: left;
+}
+
+.App-header-title {
+  margin: 0;
+}
+
+a {
+  color: rgb(18, 18, 18);
+}
+</style>
